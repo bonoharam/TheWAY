@@ -1,0 +1,58 @@
+{% extends 'twpoint/base.html' %}
+{% block css_sb %}{% load static %} <link href="{% static 'twpoint/bootstrapdist/css/sb-admin-2.css' %}" rel="stylesheet">{% endblock %}
+{% block main_content %}
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Statistics</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-mobile-phone"></i> App Data
+                </div>
+                <div class="panel-body">
+                    <div class="flot-chart">
+                        <div class="flot-chart-content" id="flot-pie-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Location Data By Date
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Data
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'twpoint/vendor/flot/excanvas.js' %}"></script>
+<script src="{% static 'twpoint/vendor/flot/jquery.flot.js' %}"></script>
+<script src="{% static 'twpoint/vendor/flot/jquery.flot.pie.js' %}"></script>
+<script src="{% static 'twpoint/vendor/flot/jquery.flot.resize.js' %}"></script>
+<script src="{% static 'twpoint/vendor/flot/jquery.flot.time.js' %}"></script>
+<script src="{% static 'twpoint/vendor/flot-tooltip/jquery.flot.tooltip.min.js' %}"></script>
+<script src="{% static 'twpoint/data/flot-data.js' %}"></script>
+{% endblock %}
